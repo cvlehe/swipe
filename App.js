@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View } from 'react-native';
 import { Card, Button } from 'react-native-elements';
 
 import Deck from './src/Deck';
@@ -48,11 +48,13 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <Deck
-                data={DATA}
-                renderCard={this.renderCard}
-                renderNoMoreCards={this.renderNoMoreCards}
-            />
+            <View style={{ justifyContent: 'center', flex: 1 }}>
+                <Deck
+                    data={DATA}
+                    renderCard={this.renderCard}
+                    renderNoMoreCards={this.renderNoMoreCards}
+                />
+            </View>
         );
     }
 }
